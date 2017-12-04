@@ -1,0 +1,56 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": [
+    "airbnb",
+    "prettier",
+    "prettier/flowtype",
+    "prettier/react",
+    "prettier/standard"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "plugins": [
+    "flowtype",
+    "prettier"
+  ],
+  "rules": {
+    "flowtype/delimiter-dangle": [
+      1,
+      "always-multiline"
+    ],
+    "flowtype/no-weak-types": [1, {
+      "any": false,
+      "Object": false,
+      "Function": false
+    }],
+    "no-param-reassign": 1,
+    "react/jsx-filename-extension": false,
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "prettier/prettier": ["error", {
+      "singleQuote": true,
+      "trailingComma": "all",
+      "bracketSpacing": true,
+      "jsxBracketSameLine": false,
+      "parser": "flow"
+    }]
+  },
+  "settings": {
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": true
+    }
+  }
+}

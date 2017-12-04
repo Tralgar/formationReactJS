@@ -1,0 +1,2964 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  max-width: 980px;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 45px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><title>TP-React</title></head><body><article class="markdown-body"><h1 id="react-avec-create-react-app"><a name="user-content-react-avec-create-react-app" href="#react-avec-create-react-app" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>React avec Create React App</h1>
+<h2 id="ressources"><a name="user-content-ressources" href="#ressources" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Ressources</h2>
+<ul>
+<li><a href="https://reactjs.org/">React</a> : JavaScript library for building UI</li>
+<li><a href="https://github.com/facebookincubator/create-react-app">Create React App</a> : React apps with no build configuration</li>
+<li><a href="https://redux.js.org/">Redux</a> : predictable state container for JavaScript apps</li>
+<li><a href="https://reacttraining.com/react-router/">React Router</a> : learn once, route anywhere</li>
+<li><a href="https://github.com/ReactTraining/react-router/tree/master/packages/react-router-redux">React Router Redux</a> : recording, persisting, and replaying user actions, using time travel</li>
+<li><a href="https://github.com/thejameskyle/react-loadable">React Loadable</a> : HOC for loading components with dynamic imports</li>
+<li><a href="https://github.com/nfl/react-helmet">React Helmet</a> : manage all of your changes to the document head</li>
+<li><a href="https://developmentarc.gitbooks.io/react-indepth/">React In-depth</a> : exploration of UI development</li>
+<li><a href="">React Bits</a> : compilation of React Patterns, techniques, tips and tricks</li>
+<li><a href="https://flow.org/en/docs/">Flow</a> : static type checker for JavaScript</li>
+<li><a href="https://webpack.js.org/">Webpack</a> : bundle your assets</li>
+<li><a href="https://babeljs.io/">Babel</a> : JavaScript compiler</li>
+<li><a href="https://yarnpkg.com/fr/">Yarn</a> : fast, reliable, and secure dependency management</li>
+</ul>
+<h2 id="prerequis"><a name="user-content-prerequis" href="#prerequis" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Prérequis</h2>
+<p><a href="https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi">Installation de React Developer Tools</a></p>
+<p><a href="https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd">Installation de Redux DevTools</a></p>
+<p><a href="https://nodejs.org/en/download/">Installation de Node.js® &gt;=8</a></p>
+<p>Debian/Ubuntu Linux</p>
+<pre><code class="bash">curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt-get install -y nodejs build-essential
+</code></pre>
+
+<p><a href="https://yarnpkg.com/lang/en/docs/install/">Installation de Yarn</a></p>
+<p>Debian/Ubuntu Linux</p>
+<pre><code class="bash">curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+
+echo &quot;deb https://dl.yarnpkg.com/debian/ stable main&quot; | sudo tee /etc/apt/sources.list.d/yarn.list
+
+sudo apt-get update &amp;&amp; sudo apt-get install yarn
+
+export PATH=&quot;$PATH:`yarn global bin`&quot;
+</code></pre>
+
+<p>Windows : <a href="https://yarnpkg.com/latest.msi">Télécharger l’installateur</a></p>
+<p>ou via <a href="https://chocolatey.org/">Chocolatey</a></p>
+<pre><code class="bash">choco install yarn
+</code></pre>
+
+<p>ou via <a href="http://scoop.sh/">Scoop</a></p>
+<pre><code class="bash">scoop install yarn
+</code></pre>
+
+<h2 id="programme"><a name="user-content-programme" href="#programme" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Programme</h2>
+<ol>
+<li>Création du projet</li>
+<li>Ajout d&rsquo;un composant statique</li>
+<li>Ajout d&rsquo;un second composant et utilisation des <code>props</code></li>
+<li>Gestion de l&rsquo;état d&rsquo;un composant</li>
+<li>Gestion de l&rsquo;état de l&rsquo;application</li>
+<li>Prettier + Flow</li>
+<li>Prettier + Flow + ESLint</li>
+<li>Gestion de l&rsquo;état de l&rsquo;application avec Redux</li>
+<li>Action asynchrone avec Redux Thunk</li>
+<li>Routing avec React Router</li>
+</ol>
+<hr />
+<h3 id="1-creation-du-projet"><a name="user-content-1-creation-du-projet" href="#1-creation-du-projet" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>1. Création du projet</h3>
+<pre><code class="bash">yarn global add create-react-app
+create-react-app my-app
+cd my-app/
+yarn start
+</code></pre>
+
+<h3 id="2-ajout-dun-composant-statique"><a name="user-content-2-ajout-dun-composant-statique" href="#2-ajout-dun-composant-statique" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>2. Ajout d&rsquo;un composant statique</h3>
+<p>Renommer</p>
+<p><code>+my-app/src/App.js =&gt; my-app/src/App.jsx</code></p>
+<p>Créer les fichiers</p>
+<p><code>+my-app/src/ProductList.jsx</code><br />
+<code>+my-app/src/products.json</code></p>
+<p>ProductList.jsx est un composant React qui rend une liste de produits.<br />
+products.json est un JSON contenant les données des produits</p>
+<pre><code>import React, { Component } from 'react';
+import products from './products.json';
+
+
+class ProductList extends Component {
+    render() {
+        // TODO boucler sur les produits pour afficher le nom, le prix et l'image
+    }
+}
+
+export default ProductList;
+</code></pre>
+
+<p>Utiliser ProductList.jsx dans App.jsx</p>
+<p><details> <br />
+  <summary>Contenu de products.json</summary><br />
+<pre><code class="on">[
+    {
+      &quot;id&quot;: 1,
+      &quot;name&quot;: &quot;Vélo de Ville Électrique MATRA i-FLOW FREE N7 Noir 2017&quot;,
+      &quot;price&quot;: &quot;1 499,99&quot;,
+      &quot;currencySymbol&quot;: &quot;€&quot;,
+      &quot;currencyCode&quot;: &quot;EUR&quot;,
+      &quot;image&quot;:
+        &quot;https://assets.probikeshop.fr/images/products2/562/135334/380x380-135334_14927290547322.jpg&quot;,
+      &quot;description&quot;:
+        &quot;&lt;p&gt;Hey, Luke! May the Force be with you. I suggest you try it again, Luke. This time, let go your conscious self and act on instinct. The plans you refer to will soon be back in our hands. Escape is not his plan. I must face him, alone.&lt;/p&gt;&lt;p&gt;Dantooine. They're on Dantooine. In my experience, there is no such thing as luck. All right. Well, take care of yourself, Han. I guess that's what you're best at, ain't it? Don't underestimate the Force.&lt;/p&gt;&lt;p&gt;All right. Well, take care of yourself, Han. &lt;strong&gt; I guess that's what you're best at, ain't it?&lt;/strong&gt; &lt;em&gt; I'm surprised you had the courage to take the responsibility yourself.&lt;/em&gt; I'm surprised you had the courage to take the responsibility yourself.&lt;/p&gt;&lt;p&gt;She must have hidden the plans in the escape pod. Send a detachment down to retrieve them, and see to it personally, Commander. There'll be no one to stop us this time! A tremor in the Force. The last time I felt it was in the presence of my old master.&lt;/p&gt;&lt;p&gt;She must have hidden the plans in the escape pod. Send a detachment down to retrieve them, and see to it personally, Commander. There'll be no one to stop us this time! Oh God, my uncle. How am I ever gonna explain this?&lt;/p&gt;&quot;
+    },
+    {
+      &quot;id&quot;: 2,
+      &quot;name&quot;:
+        &quot;Vélo de Voyage Électrique GHOST HYBRIDE SQUARE TREKKING 4 Noir 2017&quot;,
+      &quot;price&quot;: &quot;1 999,99&quot;,
+      &quot;currencySymbol&quot;: &quot;€&quot;,
+      &quot;currencyCode&quot;: &quot;EUR&quot;,
+      &quot;image&quot;:
+        &quot;https://assets.probikeshop.fr/images/products2/226/131033/380x380-131033_14914655592642.jpg&quot;,
+      &quot;description&quot;:
+        &quot;&lt;p&gt;Hey, Luke! May the Force be with you. I suggest you try it again, Luke. This time, let go your conscious self and act on instinct. The plans you refer to will soon be back in our hands. Escape is not his plan. I must face him, alone.&lt;/p&gt;&lt;p&gt;Dantooine. They're on Dantooine. In my experience, there is no such thing as luck. All right. Well, take care of yourself, Han. I guess that's what you're best at, ain't it? Don't underestimate the Force.&lt;/p&gt;&lt;p&gt;All right. Well, take care of yourself, Han. &lt;strong&gt; I guess that's what you're best at, ain't it?&lt;/strong&gt; &lt;em&gt; I'm surprised you had the courage to take the responsibility yourself.&lt;/em&gt; I'm surprised you had the courage to take the responsibility yourself.&lt;/p&gt;&lt;p&gt;She must have hidden the plans in the escape pod. Send a detachment down to retrieve them, and see to it personally, Commander. There'll be no one to stop us this time! A tremor in the Force. The last time I felt it was in the presence of my old master.&lt;/p&gt;&lt;p&gt;She must have hidden the plans in the escape pod. Send a detachment down to retrieve them, and see to it personally, Commander. There'll be no one to stop us this time! Oh God, my uncle. How am I ever gonna explain this?&lt;/p&gt;&quot;
+    },
+    {
+      &quot;id&quot;: 3,
+      &quot;name&quot;: &quot;Vélo de Voyage Électrique FELT QXe85-EQ Gris 2017&quot;,
+      &quot;price&quot;: &quot;2 199,99&quot;,
+      &quot;currencySymbol&quot;: &quot;€&quot;,
+      &quot;currencyCode&quot;: &quot;EUR&quot;,
+      &quot;image&quot;:
+        &quot;https://assets.probikeshop.fr/images/products2/532/132502/380x380-132502_14979603391364.jpg&quot;,
+      &quot;description&quot;:
+        &quot;&lt;p&gt;Hey, Luke! May the Force be with you. I suggest you try it again, Luke. This time, let go your conscious self and act on instinct. The plans you refer to will soon be back in our hands. Escape is not his plan. I must face him, alone.&lt;/p&gt;&lt;p&gt;Dantooine. They're on Dantooine. In my experience, there is no such thing as luck. All right. Well, take care of yourself, Han. I guess that's what you're best at, ain't it? Don't underestimate the Force.&lt;/p&gt;&lt;p&gt;All right. Well, take care of yourself, Han. &lt;strong&gt; I guess that's what you're best at, ain't it?&lt;/strong&gt; &lt;em&gt; I'm surprised you had the courage to take the responsibility yourself.&lt;/em&gt; I'm surprised you had the courage to take the responsibility yourself.&lt;/p&gt;&lt;p&gt;She must have hidden the plans in the escape pod. Send a detachment down to retrieve them, and see to it personally, Commander. There'll be no one to stop us this time! A tremor in the Force. The last time I felt it was in the presence of my old master.&lt;/p&gt;&lt;p&gt;She must have hidden the plans in the escape pod. Send a detachment down to retrieve them, and see to it personally, Commander. There'll be no one to stop us this time! Oh God, my uncle. How am I ever gonna explain this?&lt;/p&gt;&quot;
+    },
+    {
+      &quot;id&quot;: 4,
+      &quot;name&quot;: &quot;Vélo de Ville Électrique ORTLER KINGMAN Bleu&quot;,
+      &quot;price&quot;: &quot;1 249,00&quot;,
+      &quot;currencySymbol&quot;: &quot;€&quot;,
+      &quot;currencyCode&quot;: &quot;EUR&quot;,
+      &quot;image&quot;:
+        &quot;https://images.internetstores.de/products//585313/02/606c9a/Ortler_Kingman_blue[380x380].jpg?forceSize=true&amp;forceAspectRatio=true&amp;forceAlign=center&quot;,
+      &quot;description&quot;:
+        &quot;&lt;p&gt;Hey, Luke! May the Force be with you. I suggest you try it again, Luke. This time, let go your conscious self and act on instinct. The plans you refer to will soon be back in our hands. Escape is not his plan. I must face him, alone.&lt;/p&gt;&lt;p&gt;Dantooine. They're on Dantooine. In my experience, there is no such thing as luck. All right. Well, take care of yourself, Han. I guess that's what you're best at, ain't it? Don't underestimate the Force.&lt;/p&gt;&lt;p&gt;All right. Well, take care of yourself, Han. &lt;strong&gt; I guess that's what you're best at, ain't it?&lt;/strong&gt; &lt;em&gt; I'm surprised you had the courage to take the responsibility yourself.&lt;/em&gt; I'm surprised you had the courage to take the responsibility yourself.&lt;/p&gt;&lt;p&gt;She must have hidden the plans in the escape pod. Send a detachment down to retrieve them, and see to it personally, Commander. There'll be no one to stop us this time! A tremor in the Force. The last time I felt it was in the presence of my old master.&lt;/p&gt;&lt;p&gt;She must have hidden the plans in the escape pod. Send a detachment down to retrieve them, and see to it personally, Commander. There'll be no one to stop us this time! Oh God, my uncle. How am I ever gonna explain this?&lt;/p&gt;&quot;
+    },
+    {
+      &quot;id&quot;: 5,
+      &quot;name&quot;: &quot;Vélo de Ville Électrique MATRA i-FLOW FREE D8 Noir 2017&quot;,
+      &quot;price&quot;: &quot;1 299,99&quot;,
+      &quot;currencySymbol&quot;: &quot;€&quot;,
+      &quot;currencyCode&quot;: &quot;EUR&quot;,
+      &quot;image&quot;:
+        &quot;https://assets.probikeshop.fr/images/products2/562/135331/380x380-135331_14873430326509.jpg&quot;,
+      &quot;description&quot;:
+        &quot;&lt;p&gt;Hey, Luke! May the Force be with you. I suggest you try it again, Luke. This time, let go your conscious self and act on instinct. The plans you refer to will soon be back in our hands. Escape is not his plan. I must face him, alone.&lt;/p&gt;&lt;p&gt;Dantooine. They're on Dantooine. In my experience, there is no such thing as luck. All right. Well, take care of yourself, Han. I guess that's what you're best at, ain't it? Don't underestimate the Force.&lt;/p&gt;&lt;p&gt;All right. Well, take care of yourself, Han. &lt;strong&gt; I guess that's what you're best at, ain't it?&lt;/strong&gt; &lt;em&gt; I'm surprised you had the courage to take the responsibility yourself.&lt;/em&gt; I'm surprised you had the courage to take the responsibility yourself.&lt;/p&gt;&lt;p&gt;She must have hidden the plans in the escape pod. Send a detachment down to retrieve them, and see to it personally, Commander. There'll be no one to stop us this time! A tremor in the Force. The last time I felt it was in the presence of my old master.&lt;/p&gt;&lt;p&gt;She must have hidden the plans in the escape pod. Send a detachment down to retrieve them, and see to it personally, Commander. There'll be no one to stop us this time! Oh God, my uncle. How am I ever gonna explain this?&lt;/p&gt;&quot;
+    },
+    {
+      &quot;id&quot;: 6,
+      &quot;name&quot;: &quot;Vélo de Ville Électrique MATRA i-FLOW FREE D8 Blanc 2017&quot;,
+      &quot;price&quot;: &quot;1 299,99&quot;,
+      &quot;currencySymbol&quot;: &quot;€&quot;,
+      &quot;currencyCode&quot;: &quot;EUR&quot;,
+      &quot;image&quot;:
+        &quot;https://assets.probikeshop.fr/images/products2/562/135333/380x380-135333_14873433261445.jpg&quot;,
+      &quot;description&quot;:
+        &quot;&lt;p&gt;Hey, Luke! May the Force be with you. I suggest you try it again, Luke. This time, let go your conscious self and act on instinct. The plans you refer to will soon be back in our hands. Escape is not his plan. I must face him, alone.&lt;/p&gt;&lt;p&gt;Dantooine. They're on Dantooine. In my experience, there is no such thing as luck. All right. Well, take care of yourself, Han. I guess that's what you're best at, ain't it? Don't underestimate the Force.&lt;/p&gt;&lt;p&gt;All right. Well, take care of yourself, Han. &lt;strong&gt; I guess that's what you're best at, ain't it?&lt;/strong&gt; &lt;em&gt; I'm surprised you had the courage to take the responsibility yourself.&lt;/em&gt; I'm surprised you had the courage to take the responsibility yourself.&lt;/p&gt;&lt;p&gt;She must have hidden the plans in the escape pod. Send a detachment down to retrieve them, and see to it personally, Commander. There'll be no one to stop us this time! A tremor in the Force. The last time I felt it was in the presence of my old master.&lt;/p&gt;&lt;p&gt;She must have hidden the plans in the escape pod. Send a detachment down to retrieve them, and see to it personally, Commander. There'll be no one to stop us this time! Oh God, my uncle. How am I ever gonna explain this?&lt;/p&gt;&quot;
+    }
+  ]
+</code></pre><br />
+</details></p>
+<p><details><br />
+  <summary>Solution ProductList.jsx</summary><br />
+<pre><code>import React, { Component } from 'react';
+import products from './products.json';
+import './App.css';
+
+class ProductList extends Component {
+  render() {
+    const bikes = products.map((bike, index) =&gt; {
+      return (
+        &lt;li key={`product-${index}`} itemScope itemType=&quot;http://schema.org/Product&quot;&gt;
+          &lt;span itemProp=&quot;name&quot;&gt;{bike.name}&lt;/span&gt;
+          &lt;div itemProp=&quot;offers&quot; itemScope itemType=&quot;http://schema.org/Offer&quot;&gt;
+            &lt;span itemProp=&quot;price&quot; content=&quot;{bike.price.replace(' ', '').replace(',', '.')}&quot;&gt;
+              {bike.price}
+            &lt;/span&gt;
+            &lt;span itemProp=&quot;priceCurrency&quot; content=&quot;{bike.currencyCode}&quot;&gt;{bike.currencySymbol}&lt;/span&gt;
+            &lt;link itemProp=&quot;availability&quot; href=&quot;http://schema.org/InStock&quot; /&gt; En stock
+          &lt;/div&gt;
+          &lt;img itemProp=&quot;image&quot; src={bike.image} alt={bike.name} /&gt;
+        &lt;/li&gt;
+      );
+    });
+    return (
+      &lt;div className=&quot;App&quot;&gt;
+        &lt;header className=&quot;App-header&quot;&gt;
+          &lt;h1 className=&quot;App-title&quot;&gt;Vélos Électriques&lt;/h1&gt; 35 produit(s)
+        &lt;/header&gt;
+        &lt;ul className=&quot;App-intro ProductList&quot;&gt;{bikes}&lt;/ul&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+
+export default ProductList;
+</code></pre><br />
+</details><br />
+<details><br />
+  <summary>Solution App.jsx</summary><br />
+<pre><code>import React, { Component } from 'react';
+import ProductList from './ProductList';
+import './App.css';
+
+class App extends Component {
+  render() {
+    return (
+      &lt;div className=&quot;App&quot;&gt;
+        &lt;ProductList /&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+
+export default App;
+</code></pre><br />
+</details></p>
+<h3 id="3-ajout-dun-second-composant-et-utilisation-des-props"><a name="user-content-3-ajout-dun-second-composant-et-utilisation-des-props" href="#3-ajout-dun-second-composant-et-utilisation-des-props" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3. Ajout d&rsquo;un second composant et utilisation des <code>props</code></h3>
+<p>Créer le fichier</p>
+<p><code>+my-app/src/Product.jsx</code></p>
+<p>Product.jsx est un composant React qui rend un produit.<br />
+Modifier ProductList pour utiliser Product en passant des données en props</p>
+<pre><code>import React, { Component } from 'react';
+
+class Product extends Component {
+    render() {
+        // TODO utiliser les props pour afficher le nom, le prix et l'image
+    }
+}
+
+export default Product;
+</code></pre>
+
+<p><details><br />
+  <summary>Solution Product.jsx</summary><br />
+<pre><code>import React, { Component } from 'react';
+
+class Product extends Component {
+  render() {
+    return (
+      &lt;li itemScope itemType=&quot;http://schema.org/Product&quot;&gt;
+        &lt;span itemProp=&quot;name&quot;&gt;{this.props.bike.name}&lt;/span&gt;
+        &lt;div itemProp=&quot;offers&quot; itemScope itemType=&quot;http://schema.org/Offer&quot;&gt;
+          &lt;span itemProp=&quot;price&quot; content=&quot;{this.props.bike.price.replace(' ', '').replace(',', '.')}&quot;&gt;
+            {this.props.bike.price}
+          &lt;/span&gt;
+          &lt;span itemProp=&quot;priceCurrency&quot; content=&quot;{this.props.bike.currencyCode}&quot;&gt;{this.props.bike.currencySymbol}&lt;/span&gt;
+          &lt;link itemProp=&quot;availability&quot; href=&quot;http://schema.org/InStock&quot; /&gt; En stock
+        &lt;/div&gt;
+        &lt;img itemProp=&quot;image&quot; src={this.props.bike.image} alt={this.props.bike.name}/&gt;
+      &lt;/li&gt;
+    );
+  }
+}
+
+export default Product;
+</code></pre><br />
+</details></p>
+<p><details><br />
+  <summary>Solution ProductList.jsx</summary><br />
+<pre><code>...
+const bikes = products.map((bike, index) =&gt; {
+  return (&lt;Product key={`product-${index}`} bike={bike} /&gt;);
+});
+...
+</code></pre><br />
+</details></p>
+<h3 id="4-gestion-de-letat-dun-composant"><a name="user-content-4-gestion-de-letat-dun-composant" href="#4-gestion-de-letat-dun-composant" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>4. Gestion de l&rsquo;état d&rsquo;un composant</h3>
+<p>Modifier le composant Product pour gérer un état &ldquo;est dans le panier&rdquo;<br />
+Ajouter un bouton &ldquo;Ajouter au panier&rdquo;, au clic le panier &ldquo;est dans le panier&rdquo;<br />
+Ajouter un bouton &ldquo;Supprimer au panier&rdquo;, au clic le panier &ldquo;n&rsquo; est plus dans le panier&rdquo;<br />
+Afficher l&rsquo;un ou l&rsquo;autre des boutons en fonction de l&rsquo;état</p>
+<p><details><br />
+  <summary>Solution</summary><br />
+<pre><code>...
+  constructor(props) { 
+    super(); 
+    this.state = { 
+      isAddedToBasket: false 
+    } 
+  }
+  handleAddClick = () =&gt; { 
+    this.setState({isAddedToBasket: true});
+  }
+  handleRemoveClick = () =&gt; { 
+    this.setState({isAddedToBasket: false});
+  }
+
+  render() { 
+    return (
+        ...
+        { 
+          this.state.isAddedToBasket 
+          ? (&lt;button className=&quot;RemoveFromBasket&quot; onClick={this.handleRemoveClick}&gt;Supprimer du panier&lt;/button&gt;) 
+          : (&lt;button className=&quot;AddToBasket&quot; onClick={this.handleAddClick}&gt;Ajouter au panier&lt;/button&gt;) 
+        }
+    ); 
+  }
+</code></pre><br />
+</details></p>
+<h3 id="5-gestion-de-letat-de-lapplication"><a name="user-content-5-gestion-de-letat-de-lapplication" href="#5-gestion-de-letat-de-lapplication" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>5. Gestion de l&rsquo;état de l&rsquo;application</h3>
+<p>Modifier l&rsquo;application (App.jsx) afin de pouvoir stocker les produits ajoutés au panier<br />
+Créer les méthodes permettant d&rsquo;ajouter/supprimer les produits, les passer en props au composant ProductList puis Product<br />
+Créer un functional component ShoppinCart qui affiche le nombre de produit dans le panier</p>
+<p><details><br />
+  <summary>Solution App.js</summary><br />
+<pre><code>...
+constructor(props) { 
+  super(); 
+  this.state = { 
+    basket: [] 
+  } 
+} 
+handleAdd = (product) =&gt; { 
+  const basket = this.state.basket.slice(); 
+  basket.push(product); 
+  this.setState({basket}); 
+} 
+handleRemove = (product) =&gt; { 
+  const basket = this.state.basket.filter( 
+    element =&gt; element.id != product.id 
+  ); 
+  this.setState({basket}); 
+} 
+render() {
+  return (
+    &lt;div className=&quot;App&quot;&gt;
+      &lt;ShoppingCart productCount={this.state.basket.length}/&gt;
+      &lt;ProductList onAdd={this.handleAdd} onRemove={this.handleRemove}/&gt;
+    &lt;/div&gt;
+  );
+}
+...
+</code></pre><br />
+</details></p>
+<p><details><br />
+  <summary>Solution ProductList</summary><br />
+<pre><code>&lt;Product onAdd={this.props.onAdd}  onRemove={this.props.onRemove} key={`product-${index}`} bike={bike} /&gt; 
+</code></pre><br />
+</details></p>
+<p><details><br />
+  <summary>Solution Product</summary><br />
+<pre><code>handleAddClick = () =&gt; { 
+    this.setState({isAddedToBasket: true}); 
+    this.props.onAdd(this.props.bike); 
+} 
+handleRemoveClick = () =&gt; { 
+    this.setState({isAddedToBasket: false}); 
+    this.props.onRemove(this.props.bike); 
+} 
+</code></pre><br />
+</details></p>
+<p><details><br />
+  <summary>Solution ShoppingCart</summary><br />
+<pre><code>import React from 'react';
+
+const ShoppingCart = (props) =&gt; {
+  return (
+    &lt;div className=&quot;accountBox_myBasket&quot;&gt;
+      &lt;img width={20} id=&quot;my-basket-image-large&quot; className=&quot;accountBoxMyBasket_imageLarge&quot; src=&quot;https://assets.probikeshop.fr/images/header/my_basket_blue_large.svg&quot; /&gt;
+      &lt;span id=&quot;my-basket-text-large&quot; className=&quot;accountBoxMyBasket_numberProductsLarge&quot;&gt;
+        {`Mon Panier (${props.productCount})`}
+      &lt;/span&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default ShoppingCart;
+</code></pre><br />
+</details></p>
+<h3 id="6-prettier-flow"><a name="user-content-6-prettier-flow" href="#6-prettier-flow" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>6. Prettier + Flow</h3>
+<p>Formater le code automatiquement</p>
+<p>Installer <a href="https://yarnpkg.com/fr/package/husky">husky</a> <a href="https://yarnpkg.com/fr/package/lint-staged">lint-staged</a> <a href="https://yarnpkg.com/fr/package/prettier">prettier</a><br />
+<pre><code class="bash">yarn add husky lint-staged prettier onchange
+</code></pre></p>
+<p>mettre à jour le package.json</p>
+<pre><code class="diff">+  &quot;lint-staged&quot;: {
++    &quot;src/**/*.{js,jsx,json,css}&quot;: [
++      &quot;prettier --single-quote --trailing-comma all --write&quot;,
++      &quot;git add&quot;
++    ]
++  },
+  &quot;scripts&quot;: {
++    &quot;precommit&quot;: &quot;lint-staged &amp;&amp; flow&quot;,
++    &quot;prettier-watch&quot;: &quot;onchange 'src/**/*.{js,jsx,json,css}' -- prettier  --single-quote --trailing-comma all --write {{changed}}&quot;
+</code></pre>
+
+<p>formater le code actuel</p>
+<pre><code class="bash">yarn prettier --single-quote --write &quot;src/**/*.{js,jsx}&quot;
+</code></pre>
+
+<p><a href="https://prettier.io/docs/en/webstorm.html">PHPStorm</a><br />
+Settings ou Preferences =&gt; Tools =&gt; File Watchers</p>
+<p><img alt="" src="/home/jeremy/workspace/WIP/Projet_Redemption/slides/images/with-prettier.png" /><br />
+<img alt="" src="/home/jeremy/workspace/WIP/Projet_Redemption/slides/images/prettier-file-watcher.png" /></p>
+<p>Typer la propriété productCount du composant ShoppingCart</p>
+<pre><code>// @flow
+import * as React from 'react';
+
+type Props = //TODO définir le type
+
+const ShoppingCart = (props) =&gt; {
+    ...
+}
+</code></pre>
+
+<p><details><br />
+  <summary>Solution typage ShoppingCart props</summary><br />
+<pre><code>// @flow
+import * as React from 'react';
+
+type Props = {
+  productCount: number
+};
+
+const ShoppingCart = (props: Props) =&gt; {
+  return (
+    &lt;div className=&quot;accountBox_myBasket&quot;&gt;
+      &lt;img
+        width={20}
+        id=&quot;my-basket-image-large&quot;
+        className=&quot;accountBoxMyBasket_imageLarge&quot;
+        src=&quot;https://assets.probikeshop.fr/images/header/my_basket_blue_large.svg&quot;
+      /&gt;
+      &lt;span
+        id=&quot;my-basket-text-large&quot;
+        className=&quot;accountBoxMyBasket_numberProductsLarge&quot;
+      &gt;
+        {`Mon Panier (${props.productCount})`}
+      &lt;/span&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default ShoppingCart;
+</code></pre><br />
+</details></p>
+<p>Ajouter Flow au hook precommit dans le <code>package.json</code></p>
+<p><details><br />
+  <summary>Solution hook precommit</summary><br />
+<pre><code>  &quot;lint-staged&quot;: {
+    &quot;src/**/*.{js,jsx,json,css}&quot;: [
+      &quot;prettier --single-quote --write&quot;,
+      &quot;git add&quot;,
+      &quot;flow check&quot;
+    ]
+  },
+</code></pre><br />
+</details></p>
+<h3 id="7-prettier-flow-eslint-csscomb"><a name="user-content-7-prettier-flow-eslint-csscomb" href="#7-prettier-flow-eslint-csscomb" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>7. Prettier + Flow + ESLint + CSSComb</h3>
+<p>Installer les dépendances de ESLint et CSSComb</p>
+<pre><code>yarn add --dev eslint eslint-config-airbnb eslint-config-prettier eslint-plugin-flowtype eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react csscomb
+</code></pre>
+
+<p>Ajouter la configuration suivante <code>.eslintrc.json</code></p>
+<pre><code class="json">{
+  &quot;parser&quot;: &quot;babel-eslint&quot;,
+  &quot;env&quot;: {
+    &quot;browser&quot;: true,
+    &quot;commonjs&quot;: true,
+    &quot;es6&quot;: true,
+    &quot;node&quot;: true
+  },
+  &quot;extends&quot;: [
+    &quot;airbnb&quot;,
+    &quot;prettier&quot;,
+    &quot;prettier/flowtype&quot;,
+    &quot;prettier/react&quot;,
+    &quot;prettier/standard&quot;
+  ],
+  &quot;parserOptions&quot;: {
+    &quot;ecmaFeatures&quot;: {
+      &quot;experimentalObjectRestSpread&quot;: true,
+      &quot;jsx&quot;: true
+    },
+    &quot;sourceType&quot;: &quot;module&quot;
+  },
+  &quot;plugins&quot;: [
+    &quot;flowtype&quot;,
+    &quot;prettier&quot;
+  ],
+  &quot;rules&quot;: {
+    &quot;flowtype/delimiter-dangle&quot;: [
+      1,
+      &quot;always-multiline&quot;
+    ],
+    &quot;flowtype/no-weak-types&quot;: [1, {
+        &quot;any&quot;: false,
+        &quot;Object&quot;: false,
+        &quot;Function&quot;: false
+    }],
+    &quot;no-param-reassign&quot;: 1,
+    &quot;react/jsx-filename-extension&quot;: false,
+    &quot;linebreak-style&quot;: [
+      &quot;error&quot;,
+      &quot;unix&quot;
+    ],
+    &quot;prettier/prettier&quot;: [&quot;error&quot;, {
+      &quot;singleQuote&quot;: true,
+      &quot;trailingComma&quot;: &quot;all&quot;,
+      &quot;bracketSpacing&quot;: true,
+      &quot;jsxBracketSameLine&quot;: false,
+      &quot;parser&quot;: &quot;flow&quot;
+    }]
+  },
+  &quot;settings&quot;: {
+    &quot;flowtype&quot;: {
+      &quot;onlyFilesWithFlowAnnotation&quot;: true
+    }
+  }
+}
+</code></pre>
+
+<p>Récupérer la configuration <a href="https://github.com/devProbikeshop/frontend/blob/2529b0ec/.csscomb.json"><code>.csscomb.json</code></a></p>
+<p>Pour vérifier qu&rsquo;il n&rsquo;y a pas de conflits de conf : ajouter, et exécuter, le script suivant dans le <code>package.json</code> :</p>
+<pre><code>&quot;eslint-check&quot;: &quot;eslint --print-config .eslintrc.json | eslint-config-prettier-check&quot;,
+</code></pre>
+
+<p>Modifier la commande <code>lint-staged</code> pour utiliser ESLint à la place de Prettier</p>
+<p>Ajouter un script <code>eslint-watch</code> sur le modèle de <code>prettier-watch</code></p>
+<p><details><br />
+  <summary>Solution</summary><br />
+<pre><code class="diff">diff --git a/my-app/package.json b/my-app/package.json
+index d69e129..425fd3f 100644
+--- a/my-app/package.json
++++ b/my-app/package.json
+@@ -8,6 +8,7 @@
+     &quot;lint-staged&quot;: &quot;^5.0.0&quot;,
+     &quot;onchange&quot;: &quot;^3.2.1&quot;,
+     &quot;prettier&quot;: &quot;^1.8.2&quot;,
++    &quot;prop-types&quot;: &quot;^15.6.0&quot;,
+     &quot;react&quot;: &quot;^16.1.0&quot;,
+     &quot;react-dom&quot;: &quot;^16.1.0&quot;,
+     &quot;react-redux&quot;: &quot;^5.0.6&quot;,
+@@ -22,12 +23,14 @@
+   },
+   &quot;lint-staged&quot;: {
++   &quot;src/scss/**/*.scss&quot;: [
++     &quot;git add&quot;
++   ],
++   &quot;src/**/*.{json,css,scss}&quot;: [
++     &quot;prettier --write&quot;,
++     &quot;git add&quot;
++   ],
++   &quot;src/**/*.{js,jsx}&quot;: [
++     &quot;eslint --fix&quot;,
++     &quot;git add&quot;
++   ]
+-    &quot;src/**/*.{js,jsx,json,css}&quot;: [
+-      &quot;prettier --single-quote --trailing-comma all --write&quot;,
+-      &quot;git add&quot;
+-    ]
+   },
+   &quot;scripts&quot;: {
++    &quot;precommit&quot;: &quot;yarn csscomb src/scss &amp;&amp; lint-staged &amp;&amp; flow&quot;,
++    &quot;eslint-check&quot;: &quot;eslint --print-config .eslintrc.json | eslint-config-prettier-check&quot;,
++    &quot;eslint-watch&quot;: &quot;onchange 'src/**/*.{js,jsx}' -- eslint --fix {{changed}}&quot;,
++    &quot;prettier-watch&quot;: &quot;onchange 'src/**/*.{json}' -- prettier --write {{changed}}&quot;,
+     &quot;start&quot;: &quot;react-scripts start&quot;,
+     &quot;build&quot;: &quot;react-scripts build&quot;,
+    &quot;test&quot;: &quot;react-scripts test --env=jsdom&quot;,
+    &quot;eject&quot;: &quot;react-scripts eject&quot;,
+    &quot;api&quot;: &quot;json-server --watch src/db.json --port 3001 --delay 600&quot;,
++   &quot;start-dev&quot;: &quot;npm-run-all --parallel prettier-watch eslint-watch start api&quot;
+@@ -38,6 +41,15 @@
+   },
+   &quot;proxy&quot;: &quot;http://localhost:3001&quot;,
+   &quot;devDependencies&quot;: {
++    &quot;babel-eslint&quot;: &quot;^8.0.2&quot;,
++    &quot;eslint&quot;: &quot;^4.12.1&quot;,
++    &quot;eslint-config-airbnb&quot;: &quot;^16.1.0&quot;,
++    &quot;eslint-config-prettier&quot;: &quot;^2.9.0&quot;,
++    &quot;eslint-plugin-flowtype&quot;: &quot;^2.39.1&quot;,
++    &quot;eslint-plugin-import&quot;: &quot;^2.8.0&quot;,
++    &quot;eslint-plugin-jsx-a11y&quot;: &quot;^6.0.2&quot;,
++    &quot;eslint-plugin-prettier&quot;: &quot;^2.3.1&quot;,
++    &quot;eslint-plugin-react&quot;: &quot;^7.5.1&quot;,
+     &quot;flow-bin&quot;: &quot;^0.59.0&quot;,
+     &quot;json-server&quot;: &quot;^0.12.1&quot;
+   }
+</code></pre><br />
+</details></p>
+<p>Exécuter ESLint et corriger les erreurs</p>
+<p><details><br />
+  <summary>Solution</summary><br />
+<pre><code class="diff">diff --git a/my-app/src/App.jsx b/my-app/src/App.jsx
+index 3a4d7f2..dd95eb1 100644
+--- a/my-app/src/App.jsx
++++ b/my-app/src/App.jsx
+@@ -1,4 +1,5 @@
+ import React, { Component } from 'react';
++import PropTypes from 'prop-types';
+ import { connect } from 'react-redux';
+ import { bindActionCreators } from 'redux';
+ import { Route } from 'react-router-dom';
+@@ -38,13 +39,34 @@ class App extends Component {
+   }
+ }
+
++App.propTypes = {
++  actions: PropTypes.objectOf(PropTypes.func).isRequired,
++  history: PropTypes.shape({
++    length: PropTypes.number,
++    action: PropTypes.string,
++    location: PropTypes.string,
++    index: PropTypes.func,
++    entries: PropTypes.func,
++    createHref: PropTypes.func,
++    push: PropTypes.func,
++    replace: PropTypes.func,
++    go: PropTypes.func,
++    goBack: PropTypes.func,
++    goForward: PropTypes.func,
++    canGo: PropTypes.func,
++    block: PropTypes.func,
++    listen: PropTypes.func,
++  }).isRequired,
++  basket: PropTypes.shape({
++    length: PropTypes.number,
++  }).isRequired,
++};
++
+ const mapStateToProps = state =&gt; ({
+   basket: state.basket,
+ });
+-const mapDispatchToProps = dispatch =&gt; {
+-  return {
+-    actions: bindActionCreators(Object.assign({}, actionCreators), dispatch),
+-  };
+-};
++const mapDispatchToProps = dispatch =&gt; ({
++  actions: bindActionCreators(Object.assign({}, actionCreators), dispatch),
++});
+
+ export default connect(mapStateToProps, mapDispatchToProps)(App);
+diff --git a/my-app/src/App.test.js b/my-app/src/App.test.js
+deleted file mode 100644
+index b84af98..0000000
+--- a/my-app/src/App.test.js
++++ /dev/null
+@@ -1,8 +0,0 @@
+-import React from 'react';
+-import ReactDOM from 'react-dom';
+-import App from './App';
+-
+-it('renders without crashing', () =&gt; {
+-  const div = document.createElement('div');
+-  ReactDOM.render(&lt;App /&gt;, div);
+-});
+diff --git a/my-app/src/actions/index.js b/my-app/src/actions/index.js
+index 206fced..4916da0 100644
+--- a/my-app/src/actions/index.js
++++ b/my-app/src/actions/index.js
+@@ -1,11 +1,15 @@
+ // @flow
+-type AddToBasketAction = { type: 'ADD_TO_BASKET', id: number };
+-type RemoveFromBasketAction = { type: 'REMOVE_FROM_BASKET', id: number };
++type AddToBasketActionType = { type: 'ADD_TO_BASKET', id: number };
++type RemoveFromBasketActionType = { type: 'REMOVE_FROM_BASKET', id: number };
+
+-export const addToBasket = (value: number): AddToBasketAction =&gt; {
+-  return { type: 'ADD_TO_BASKET', id: value };
+-};
++export const addToBasket = (value: number): AddToBasketActionType =&gt; ({
++  type: 'ADD_TO_BASKET',
++  id: value,
++});
+
+-export const removeFromBasket = (value: number): RemoveFromBasketAction =&gt; {
+-  return { type: 'REMOVE_FROM_BASKET', id: value };
+-};
++export const removeFromBasket = (
++  value: number,
++): RemoveFromBasketActionType =&gt; ({
++  type: 'REMOVE_FROM_BASKET',
++  id: value,
++});
+diff --git a/my-app/src/actions/products.js b/my-app/src/actions/products.js
+index 93c85b6..66b0b84 100644
+--- a/my-app/src/actions/products.js
++++ b/my-app/src/actions/products.js
+@@ -1,5 +1,5 @@
+ // @flow
+-type Products = Array&lt;{
++type ProductsType = Array&lt;{
+   id: number,
+   name: string,
+   price: string,
+@@ -8,10 +8,10 @@ type Products = Array&lt;{
+   image: string,
+   description: string,
+ }&gt;;
+-type State = {
++type StateType = {
+   +isLoading: boolean,
+   errorMessage?: string,
+-  +products: Products,
++  +products: ProductsType,
+   product?: {
+     +id: number,
+     +name: string,
+@@ -23,20 +23,20 @@ type State = {
+   },
+ };
+
+-type FetchProductsAction = { type: 'FETCH_PRODUCTS', isLoading: boolean };
+-type FetchProductsSuccessAction = {
++type FetchProductsActionType = { type: 'FETCH_PRODUCTS', isLoading: boolean };
++type FetchProductsSuccessActionType = {
+   type: 'FETCH_PRODUCTS_SUCCESS',
+   isLoading: boolean,
+-  products: Products,
++  products: ProductsType,
+ };
+-type FetchProductsErrorAction = {
++type FetchProductsErrorActionType = {
+   type: 'FETCH_PRODUCTS_ERROR',
+   isLoading: boolean,
+   errorMessage: string,
+ };
+
+-type FetchProductAction = { type: 'FETCH_PRODUCT', isLoading: boolean };
+-type FetchProductSuccessAction = {
++type FetchProductActionType = { type: 'FETCH_PRODUCT', isLoading: boolean };
++type FetchProductSuccessActionType = {
+   type: 'FETCH_PRODUCT_SUCCESS',
+   isLoading: boolean,
+   product: {
+@@ -49,71 +49,72 @@ type FetchProductSuccessAction = {
+     +description: string,
+   },
+ };
+-type FetchProductErrorAction = {
++type FetchProductErrorActionType = {
+   type: 'FETCH_PRODUCT_ERROR',
+   isLoading: boolean,
+   errorMessage: string,
+ };
+
+-type Action =
+-  | FetchProductsAction
+-  | FetchProductsSuccessAction
+-  | FetchProductsErrorAction
+-  | FetchProductAction
+-  | FetchProductSuccessAction
+-  | FetchProductErrorAction;
++type ActionType =
++  | FetchProductsActionType
++  | FetchProductsSuccessActionType
++  | FetchProductsErrorActionType
++  | FetchProductActionType
++  | FetchProductSuccessActionType
++  | FetchProductErrorActionType;
+
+-type GetState = () =&gt; State;
+-type PromiseAction = Promise&lt;Action&gt;;
+-type ThunkAction = (dispatch: Dispatch, getState: GetState) =&gt; any;
+-type Dispatch = (
+-  action: Action | ThunkAction | PromiseAction | Array&lt;Action&gt;,
++/* eslint-disable no-use-before-define */
++
++type GetStateType = () =&gt; StateType;
++type PromiseActionType = Promise&lt;ActionType&gt;;
++type ThunkActionType = (dispatch: DispatchType, getState: GetStateType) =&gt; any;
++type DispatchType = (
++  action: ActionType | ThunkActionType | PromiseActionType | Array&lt;ActionType&gt;,
+ ) =&gt; any;
+
+-export const fetchProducts = (): ThunkAction =&gt; {
+-  return (dispatch, getState) =&gt; {
+-    dispatch({ type: 'FETCH_PRODUCTS', isLoading: true });
+-    fetch('/products')
+-      .then(response =&gt; {
+-        return response.json();
+-      })
+-      .then(json =&gt; {
+-        dispatch({
+-          type: 'FETCH_PRODUCTS_SUCCESS',
+-          isLoading: false,
+-          products: json,
+-        });
+-      })
+-      .catch(error =&gt; {
+-        dispatch({
+-          type: 'FETCH_PRODUCTS_ERROR',
+-          isLoading: false,
+-          errorMessage: error,
+-        });
+-      });
+-  };
++/* eslint-disable no-use-before-define */
++
++export const fetchProducts = (): ThunkActionType =&gt; (dispatch: Function) =&gt; {
++  dispatch({
++    type: 'FETCH_PRODUCTS',
++    isLoading: true,
++  });
++  fetch('/products')
++    .then(response =&gt; response.json())
++    .then(json =&gt;
++      dispatch({
++        type: 'FETCH_PRODUCTS_SUCCESS',
++        isLoading: false,
++        products: json,
++      }),
++    )
++    .catch(error =&gt;
++      dispatch({
++        type: 'FETCH_PRODUCTS_ERROR',
++        isLoading: false,
++        errorMessage: error,
++      }),
++    );
+ };
+
+-export const fetchProduct = (id: number): ThunkAction =&gt; {
+-  return (dispatch, getState) =&gt; {
+-    dispatch({ type: 'FETCH_PRODUCT', isLoading: true });
+-    fetch(`/products/${id}`)
+-      .then(response =&gt; {
+-        return response.json();
+-      })
+-      .then(json =&gt; {
+-        dispatch({
+-          type: 'FETCH_PRODUCT_SUCCESS',
+-          isLoading: false,
+-          product: json,
+-        });
+-      })
+-      .catch(error =&gt; {
+-        dispatch({
+-          type: 'FETCH_PRODUCT_ERROR',
+-          isLoading: false,
+-          errorMessage: error,
+-        });
++export const fetchProduct = (id: number): ThunkActionType =&gt; (
++  dispatch: Function,
++) =&gt; {
++  dispatch({ type: 'FETCH_PRODUCT', isLoading: true });
++  fetch(`/products/${id}`)
++    .then(response =&gt; response.json())
++    .then(json =&gt; {
++      dispatch({
++        type: 'FETCH_PRODUCT_SUCCESS',
++        isLoading: false,
++        product: json,
++      });
++    })
++    .catch(error =&gt; {
++      dispatch({
++        type: 'FETCH_PRODUCT_ERROR',
++        isLoading: false,
++        errorMessage: error,
+       });
+-  };
++    });
+ };
+diff --git a/my-app/src/index.js b/my-app/src/index.js
+index 05aacbd..1ce26de 100644
+--- a/my-app/src/index.js
++++ b/my-app/src/index.js
+@@ -17,7 +17,7 @@ const enhancers = [];
+ const middleware = [thunkMiddleware, routerMiddleware(history)];
+
+ if (process.env.NODE_ENV === 'development') {
+-  const devToolsExtension = window.devToolsExtension;
++  const { devToolsExtension } = window;
+   if (typeof devToolsExtension === 'function') {
+     enhancers.push(devToolsExtension());
+   }
+@@ -25,12 +25,12 @@ if (process.env.NODE_ENV === 'development') {
+
+ const composedEnhancers = compose(applyMiddleware(...middleware), ...enhancers);
+
+-let store = createStore(pbsApp, composedEnhancers);
++const store = createStore(pbsApp, composedEnhancers);
+
+ ReactDOM.render(
+   &lt;Provider store={store}&gt;
+     &lt;App history={history} /&gt;
+   &lt;/Provider&gt;,
+-  document.getElementById('root')
++  document.getElementById('root'),
+ );
+ registerServiceWorker();
+diff --git a/my-app/src/reducers/basket.js b/my-app/src/reducers/basket.js
+index da66282..eb1b5b8 100644
+--- a/my-app/src/reducers/basket.js
++++ b/my-app/src/reducers/basket.js
+@@ -1,23 +1,28 @@
+ // @flow
+-type State = Array&lt;{
++type StateType = Array&lt;{
+   id: number,
+ }&gt;;
++type ElementType = {
++  id: number,
++};
+
+-type AddToBasketAction = { type: 'ADD_TO_BASKET', id: number };
+-type RemoveFromBasketAction = { type: 'REMOVE_FROM_BASKET', id: number };
++type AddToBasketActionType = { type: 'ADD_TO_BASKET', id: number };
++type RemoveFromBasketActionType = { type: 'REMOVE_FROM_BASKET', id: number };
+
+-type Action = AddToBasketAction | RemoveFromBasketAction;
++type ActionType = AddToBasketActionType | RemoveFromBasketActionType;
+
+-const basket = (state: State = [], action: Action): State =&gt; {
++const basket = (state: StateType = [], action: ActionType): StateType =&gt; {
+   switch (action.type) {
+-    case 'ADD_TO_BASKET':
+-      const basket = state.slice();
+-      basket.push({ id: action.id });
+-      return basket;
++    case 'ADD_TO_BASKET': {
++      const currentBasket = state.slice();
++      currentBasket.push({ id: action.id });
++      return currentBasket;
++    }
+     case 'REMOVE_FROM_BASKET':
+-      return state.filter(element =&gt; element.id !== action.id);
++      return state.filter(
++        (element: ElementType): boolean =&gt; element.id !== action.id,
++      );
+     default:
+-      (action: empty);
+       return state;
+   }
+ };
+diff --git a/my-app/src/reducers/products.js b/my-app/src/reducers/products.js
+index 86a6e73..2bff1a9 100644
+--- a/my-app/src/reducers/products.js
++++ b/my-app/src/reducers/products.js
+@@ -1,5 +1,5 @@
+ // @flow
+-type Products = Array&lt;{
++type ProductsType = Array&lt;{
+   id: number,
+   name: string,
+   price: string,
+@@ -8,10 +8,10 @@ type Products = Array&lt;{
+   image: string,
+   description: string,
+ }&gt;;
+-type State = {
++type StateType = {
+   +isLoading: boolean,
+   errorMessage?: string,
+-  +products: Products,
++  +products: ProductsType,
+   product?: {
+     +id: number,
+     +name: string,
+@@ -25,20 +25,20 @@ type State = {
+
+ const initialState = { isLoading: false, products: [] };
+
+-type FetchProductsAction = { type: 'FETCH_PRODUCTS', isLoading: boolean };
+-type FetchProductsSuccessAction = {
++type FetchProductsActionType = { type: 'FETCH_PRODUCTS', isLoading: boolean };
++type FetchProductsSuccessActionType = {
+   type: 'FETCH_PRODUCTS_SUCCESS',
+   isLoading: boolean,
+-  products: Products,
++  products: ProductsType,
+ };
+-type FetchProductsErrorAction = {
++type FetchProductsErrorActionType = {
+   type: 'FETCH_PRODUCTS_ERROR',
+   isLoading: boolean,
+   errorMessage: string,
+ };
+
+-type FetchProductAction = { type: 'FETCH_PRODUCT', isLoading: boolean };
+-type FetchProductSuccessAction = {
++type FetchProductActionType = { type: 'FETCH_PRODUCT', isLoading: boolean };
++type FetchProductSuccessActionType = {
+   type: 'FETCH_PRODUCT_SUCCESS',
+   isLoading: boolean,
+   product: {
+@@ -51,21 +51,24 @@ type FetchProductSuccessAction = {
+     +description: string,
+   },
+ };
+-type FetchProductErrorAction = {
++type FetchProductErrorActionType = {
+   type: 'FETCH_PRODUCT_ERROR',
+   isLoading: boolean,
+   errorMessage: string,
+ };
+
+-type Action =
+-  | FetchProductsAction
+-  | FetchProductsSuccessAction
+-  | FetchProductsErrorAction
+-  | FetchProductAction
+-  | FetchProductSuccessAction
+-  | FetchProductErrorAction;
++type ActionType =
++  | FetchProductsActionType
++  | FetchProductsSuccessActionType
++  | FetchProductsErrorActionType
++  | FetchProductActionType
++  | FetchProductSuccessActionType
++  | FetchProductErrorActionType;
+
+-const products = (state: State = initialState, action: Action): State =&gt; {
++const products = (
++  state: StateType = initialState,
++  action: ActionType,
++): StateType =&gt; {
+   switch (action.type) {
+     case 'FETCH_PRODUCTS':
+       return { ...state, isLoading: action.isLoading };
+@@ -88,7 +91,6 @@ const products = (state: State = initialState, action: Action): State =&gt; {
+     case 'FETCH_PRODUCT_ERROR':
+       return { ...state, isLoading: action.isLoading };
+     default:
+-      (action: empty);
+       return state;
+   }
+ };
+diff --git a/my-app/src/registerServiceWorker.js b/my-app/src/registerServiceWorker.js
+index 12542ba..067ca52 100644
+--- a/my-app/src/registerServiceWorker.js
++++ b/my-app/src/registerServiceWorker.js
+@@ -14,35 +14,10 @@ const isLocalhost = Boolean(
+     window.location.hostname === '[::1]' ||
+     // 127.0.0.1/8 is considered localhost for IPv4.
+     window.location.hostname.match(
+-      /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
+-    )
++      /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/,
++    ),
+ );
+
+-export default function register() {
+-  if (process.env.NODE_ENV === 'production' &amp;&amp; 'serviceWorker' in navigator) {
+-    // The URL constructor is available in all browsers that support SW.
+-    const publicUrl = new URL(process.env.PUBLIC_URL, window.location);
+-    if (publicUrl.origin !== window.location.origin) {
+-      // Our service worker won't work if PUBLIC_URL is on a different origin
+-      // from what our page is served on. This might happen if a CDN is used to
+-      // serve assets; see https://github.com/facebookincubator/create-react-app/issues/2374
+-      return;
+-    }
+-
+-    window.addEventListener('load', () =&gt; {
+-      const swUrl = `${process.env.PUBLIC_URL}/service-worker.js`;
+-
+-      if (isLocalhost) {
+-        // This is running on localhost. Lets check if a service worker still exists or not.
+-        checkValidServiceWorker(swUrl);
+-      } else {
+-        // Is not local host. Just register service worker
+-        registerValidSW(swUrl);
+-      }
+-    });
+-  }
+-}
+-
+ function registerValidSW(swUrl) {
+   navigator.serviceWorker
+     .register(swUrl)
+@@ -94,11 +69,36 @@ function checkValidServiceWorker(swUrl) {
+     })
+     .catch(() =&gt; {
+       console.log(
+-        'No internet connection found. App is running in offline mode.'
++        'No internet connection found. App is running in offline mode.',
+       );
+     });
+ }
+
++export default function register() {
++  if (process.env.NODE_ENV === 'production' &amp;&amp; 'serviceWorker' in navigator) {
++    // The URL constructor is available in all browsers that support SW.
++    const publicUrl = new URL(process.env.PUBLIC_URL, window.location);
++    if (publicUrl.origin !== window.location.origin) {
++      // Our service worker won't work if PUBLIC_URL is on a different origin
++      // from what our page is served on. This might happen if a CDN is used to
++      // serve assets; see https://github.com/facebookincubator/create-react-app/issues/2374
++      return;
++    }
++
++    window.addEventListener('load', () =&gt; {
++      const swUrl = `${process.env.PUBLIC_URL}/service-worker.js`;
++
++      if (isLocalhost) {
++        // This is running on localhost. Lets check if a service worker still exists or not.
++        checkValidServiceWorker(swUrl);
++      } else {
++        // Is not local host. Just register service worker
++        registerValidSW(swUrl);
++      }
++    });
++  }
++}
++
+</code></pre><br />
+</details></p>
+<h3 id="8-gestion-de-letat-de-lapplication-avec-redux"><a name="user-content-8-gestion-de-letat-de-lapplication-avec-redux" href="#8-gestion-de-letat-de-lapplication-avec-redux" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>8. Gestion de l&rsquo;état de l&rsquo;application avec Redux</h3>
+<p>Installation des dépendances </p>
+<pre><code>yarn add react-redux redux redux-devtool redux-logger redux-thunk
+</code></pre>
+
+<p>Créer les fichiers</p>
+<p><code>my-app/src/actions/shoppingCart.js</code><br />
+<code>my-app/src/reducers/index.js</code><br />
+<code>my-app/src/reducers/basket.js</code></p>
+<p><code>actions/shoppingCart.js</code> exportera deux méthodes (pour créer les actions ADD_TO_BASKET/REMOVE_FROM_BASKET)</p>
+<p><code>reducers/index.js</code> utilisera l&rsquo;<a href="https://redux.js.org/docs/api/combineReducers.html">API combineReducers</a> de Redux pour pouvoir ensuite créer le Store</p>
+<p><code>reducers/basket.js</code> exporte un méthode permettant de mettre à jour le Store en fonction des actions ADD_TO_BASKET/REMOVE_FROM_BASKET</p>
+<p>Modifier les fichiers</p>
+<p><code>my-app/src/App.jsx</code><br />
+<code>my-app/src/index.js</code></p>
+<p>Dans App.jsx l&rsquo;état du composant sera remplacé par l&rsquo;état du Store Redux. Il se chargera du dispatch des actions (utilisation de l&rsquo;API <a href="https://github.com/reactjs/react-redux/blob/master/docs/api.md#inject-todos-and-todoactioncreators-and-counteractioncreators-together-as-actions">connect et bindActionCreators</a>)</p>
+<p>Dans index.js le Store sera créé à partir des Reducers et Middlewares (API <a href="https://redux.js.org/docs/api/createStore.html">createStore</a>, <a href="https://redux.js.org/docs/api/compose.html">compose</a>, <a href="https://redux.js.org/docs/api/applyMiddleware.html">applyMiddleware</a>)</p>
+<p><details><br />
+  <summary>Solution</summary><br />
+<pre><code class="diff">
+diff --git a/my-app/src/App.jsx b/my-app/src/App.jsx
+index 9078132..e7fba2a 100644
+--- a/my-app/src/App.jsx
++++ b/my-app/src/App.jsx
+@@ -1,34 +1,35 @@
+ import React, { Component } from 'react';
++import { connect } from 'react-redux';
++import { bindActionCreators } from 'redux';
++import * as actionCreators from './actions';
+ import ProductList from './ProductList';
+ import ShoppingCart from './ShoppingCart';
+ import './App.css';
+
+ class App extends Component {
+-  constructor(props) {
+-    super();
+-    this.state = {
+-      basket: []
+-    };
+-  }
+   handleAdd = product =&gt; {
+-    const basket = this.state.basket.slice();
+-    basket.push(product);
+-    this.setState({ basket });
++    this.props.actions.addToBasket(product.id);
+   };
+   handleRemove = product =&gt; {
+-    const basket = this.state.basket.filter(
+-      element =&gt; element.id != product.id
+-    );
+-    this.setState({ basket });
++    this.props.actions.removeFromBasket(product.id);
+   };
+   render() {
+     return (
+       &lt;div className=&quot;App&quot;&gt;
+-        &lt;ShoppingCart productCount={this.state.basket.length} /&gt;
++        &lt;ShoppingCart productCount={this.props.basket.length} /&gt;
+         &lt;ProductList onAdd={this.handleAdd} onRemove={this.handleRemove} /&gt;
+       &lt;/div&gt;
+     );
+   }
+ }
+
+-export default App;
++const mapStateToProps = state =&gt; ({
++  basket: state.basket
++});
++const mapDispatchToProps = dispatch =&gt; {
++  return {
++    actions: bindActionCreators(Object.assign({}, actionCreators), dispatch)
++  };
++};
++
++export default connect(mapStateToProps, mapDispatchToProps)(App);
+diff --git a/my-app/src/ShoppingCart.jsx b/my-app/src/ShoppingCart.jsx
+index c4a8f57..0917370 100644
+--- a/my-app/src/ShoppingCart.jsx
++++ b/my-app/src/ShoppingCart.jsx
+@@ -11,6 +11,7 @@ const ShoppingCart = (props: Props) =&gt; {
+       &lt;img
+         width={20}
+         id=&quot;my-basket-image-large&quot;
++        alt=&quot;&quot;
+         className=&quot;accountBoxMyBasket_imageLarge&quot;
+         src=&quot;https://assets.probikeshop.fr/images/header/my_basket_blue_large.svg&quot;
+       /&gt;
+diff --git a/my-app/src/actions/index.js b/my-app/src/actions/index.js
+new file mode 100644
+index 0000000..206fced
+--- /dev/null
++++ b/my-app/src/actions/index.js
+@@ -0,0 +1,11 @@
++// @flow
++type AddToBasketAction = { type: 'ADD_TO_BASKET', id: number };
++type RemoveFromBasketAction = { type: 'REMOVE_FROM_BASKET', id: number };
++
++export const addToBasket = (value: number): AddToBasketAction =&gt; {
++  return { type: 'ADD_TO_BASKET', id: value };
++};
++
++export const removeFromBasket = (value: number): RemoveFromBasketAction =&gt; {
++  return { type: 'REMOVE_FROM_BASKET', id: value };
++};
+diff --git a/my-app/src/index.js b/my-app/src/index.js
+index fae3e35..8b110d0 100644
+--- a/my-app/src/index.js
++++ b/my-app/src/index.js
+@@ -1,8 +1,31 @@
+ import React from 'react';
+ import ReactDOM from 'react-dom';
++import { Provider } from 'react-redux';
++import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
++import pbsApp from './reducers';
+ import './index.css';
+ import App from './App';
+ import registerServiceWorker from './registerServiceWorker';
+
+-ReactDOM.render(&lt;App /&gt;, document.getElementById('root'));
++// Initialisation des middlewares et extensions de Redux
++const enhancers = [];
++const middleware = [];
++
++if (process.env.NODE_ENV === 'development') {
++  const devToolsExtension = window.devToolsExtension;
++  if (typeof devToolsExtension === 'function') {
++    enhancers.push(devToolsExtension());
++  }
++}
++
++const composedEnhancers = compose(applyMiddleware(...middleware), ...enhancers);
++
++let store = createStore(pbsApp, composedEnhancers);
++
++ReactDOM.render(
++  &lt;Provider store={store}&gt;
++    &lt;App /&gt;
++  &lt;/Provider&gt;,
++  document.getElementById('root')
++);
+ registerServiceWorker();
+diff --git a/my-app/src/reducers/basket.js b/my-app/src/reducers/basket.js
+new file mode 100644
+index 0000000..e980125
+--- /dev/null
++++ b/my-app/src/reducers/basket.js
+@@ -0,0 +1,25 @@
++// @flow
++type State = Array&lt;{
++  id: number
++}&gt;;
++
++type AddToBasketAction = { type: 'ADD_TO_BASKET', id: number };
++type RemoveFromBasketAction = { type: 'REMOVE_FROM_BASKET', id: number };
++
++type Action = AddToBasketAction | RemoveFromBasketAction;
++
++const basket = (state: State = [], action: Action): State =&gt; {
++  switch (action.type) {
++    case 'ADD_TO_BASKET':
++      const basket = state.slice();
++      basket.push({ id: action.id });
++      return basket;
++    case 'REMOVE_FROM_BASKET':
++      return state.filter(element =&gt; element.id !== action.id);
++    default:
++      (action: empty);
++      return state;
++  }
++};
++
++export default basket;
+diff --git a/my-app/src/reducers/index.js b/my-app/src/reducers/index.js
+new file mode 100644
+index 0000000..f1afb43
+--- /dev/null
++++ b/my-app/src/reducers/index.js
+@@ -0,0 +1,8 @@
++import { combineReducers } from 'redux';
++import basket from './basket';
++
++const pbsApp = combineReducers({
++  basket
++});
++
++export default pbsApp;
+</code></pre><br />
+</details></p>
+<h3 id="9-action-asynchrone-avec-redux-thunk"><a name="user-content-9-action-asynchrone-avec-redux-thunk" href="#9-action-asynchrone-avec-redux-thunk" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>9. Action asynchrone avec Redux Thunk</h3>
+<p>Installation de <a href="https://yarnpkg.com/en/package/json-server">json-server</a></p>
+<pre><code>yarn add yarn-run-all
+yarn add --dev json-server
+</code></pre>
+
+<p>Modifier le fichier products.json pour avoir un objet json de la forme :<br />
+<pre><code class="json">{
+    &quot;products&quot;: [
+        {},
+        ...
+        {},
+        {}
+    ]
+}
+</code></pre><br />
+Modifier le <code>package.json</code> pour démarrer le faux serveur d&rsquo;API REST, et définir un proxy pour les appels effectués avec fetch<br />
+<pre><code class="diff">  &quot;scripts&quot;: {
++   &quot;api&quot;: &quot;json-server --watch src/db.json --port 3001&quot;, 
++   &quot;start-dev&quot;: &quot;npm-run-all --parallel prettier-watch start api&quot;,
+...
+  },
++ &quot;proxy&quot;: &quot;http://localhost:3001&quot;, 
+</code></pre></p>
+<p>Créer les actions et reducers<br />
+<code>my-app/src/actions/products.js</code><br />
+<code>my-app/src/reducers/index.js</code><br />
+<code>my-app/src/reducers/products.js</code></p>
+<p><code>my-app/src/actions/products.js</code> exporte une une méthode qui dispatch les actions FETCH_PRODUCTS, FETCH_PRODUCTS_SUCCESS, FETCH_PRODUCTS_ERROR en fonction de l&rsquo;état de l&rsquo;appel à l&rsquo;API REST /products via <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">fetch</a>.</p>
+<p><code>my-app/src/reducers/index.js</code> combine les reducers de notre application</p>
+<p><code>my-app/src/reducers/products.js</code> exporte une méthode pour mettre à jour le Store en fonction des actions FETCH_PRODUCTS, FETCH_PRODUCTS_SUCCESS, FETCH_PRODUCTS_ERROR</p>
+<p>Modifier le point d&rsquo;entrée pour ajouter le middleware redux-thunk  dans <code>my-app/src/index.js</code></p>
+<p>Modifier le composant <code>my-app/src/ProductList.jsx</code> pour afficher un bouton à la place de la liste des produits. Au clic on dispatche l&rsquo;action pour charger les produits, pendant le chargement afficher un loader, en cas de succès on affiche les produits, en cas d&rsquo;erreur un beau message d&rsquo;erreur.</p>
+<p><details><br />
+  <summary>Solution</summary><br />
+<pre><code class="diff">
+diff --git a/my-app/src/ProductList.jsx b/my-app/src/ProductList.jsx
+index 7de0d4c..ffe0f08 100644
+--- a/my-app/src/ProductList.jsx
++++ b/my-app/src/ProductList.jsx
+@@ -1,29 +1,54 @@
+ import React, { Component } from 'react';
+-import products from './c9252.json';
+ import Product from './Product';
++import { connect } from 'react-redux';
++import { bindActionCreators } from 'redux';
++import * as actionCreators from './actions/products.js';
+ import './App.css';
+
+ class ProductList extends Component {
++  handleClick = () =&gt; {
++    this.props.actions.fetchProducts();
++  };
+   render() {
+-    const bikes = products.map((bike, index) =&gt; {
++    if (this.props.products.isLoading) {
++      return &lt;div className=&quot;App&quot;&gt;...loading&lt;/div&gt;;
++    } else {
++      if (this.props.products.products.length) {
++        const bikes = this.props.products.products.map((bike, index) =&gt; {
++          return (
++            &lt;Product
++              onAdd={this.props.onAdd}
++              onRemove={this.props.onRemove}
++              key={`product-${index}`}
++              bike={bike}
++            /&gt;
++          );
++        });
++        return (
++          &lt;div className=&quot;App&quot;&gt;
++            &lt;header className=&quot;App-header&quot;&gt;
++              &lt;h1 className=&quot;App-title&quot;&gt;Vélos Électriques&lt;/h1&gt; 35 produit(s)
++            &lt;/header&gt;
++            &lt;ul className=&quot;App-intro ProductList&quot;&gt;{bikes}&lt;/ul&gt;
++          &lt;/div&gt;
++        );
++      }
+       return (
+-        &lt;Product
+-          onAdd={this.props.onAdd}
+-          onRemove={this.props.onRemove}
+-          key={`product-${index}`}
+-          bike={bike}
+-        /&gt;
++        &lt;div className=&quot;App&quot;&gt;
++          &lt;button onClick={this.handleClick}&gt;Charger les produits&lt;/button&gt;
++        &lt;/div&gt;
+       );
+-    });
+-    return (
+-      &lt;div className=&quot;App&quot;&gt;
+-        &lt;header className=&quot;App-header&quot;&gt;
+-          &lt;h1 className=&quot;App-title&quot;&gt;Vélos Électriques&lt;/h1&gt; 35 produit(s)
+-        &lt;/header&gt;
+-        &lt;ul className=&quot;App-intro ProductList&quot;&gt;{bikes}&lt;/ul&gt;
+-      &lt;/div&gt;
+-    );
++    }
+   }
+ }
+
+-export default ProductList;
++const mapStateToProps = state =&gt; ({
++  products: state.products
++});
++const mapDispatchToProps = dispatch =&gt; {
++  return {
++    actions: bindActionCreators(Object.assign({}, actionCreators), dispatch)
++  };
++};
++
++export default connect(mapStateToProps, mapDispatchToProps)(ProductList);
+diff --git a/my-app/src/actions/products.js b/my-app/src/actions/products.js
+new file mode 100644
+index 0000000..1f25a91
+--- /dev/null
++++ b/my-app/src/actions/products.js
+@@ -0,0 +1,63 @@
++// @flow
++type Products = Array&lt;{
++  id: number,
++  name: string,
++  price: string,
++  currencySymbol: string,
++  currencyCode: string,
++  image: string,
++  description: string
++}&gt;;
++type State = {
++  +isLoading: boolean,
++  errorMessage?: string,
++  +products: Products
++};
++
++type FetchProductsAction = { type: 'FETCH_PRODUCTS', isLoading: boolean };
++type FetchProductsSuccessAction = {
++  type: 'FETCH_PRODUCTS_SUCCESS',
++  isLoading: boolean,
++  products: Products
++};
++type FetchProductsErrorAction = {
++  type: 'FETCH_PRODUCTS_ERROR',
++  isLoading: boolean,
++  errorMessage: string
++};
++
++type Action =
++  | FetchProductsAction
++  | FetchProductsSuccessAction
++  | FetchProductsErrorAction;
++
++type GetState = () =&gt; State;
++type PromiseAction = Promise&lt;Action&gt;;
++type ThunkAction = (dispatch: Dispatch, getState: GetState) =&gt; any;
++type Dispatch = (
++  action: Action | ThunkAction | PromiseAction | Array&lt;Action&gt;
++) =&gt; any;
++
++export const fetchProducts = (): ThunkAction =&gt; {
++  return (dispatch, getState) =&gt; {
++    dispatch({ type: 'FETCH_PRODUCTS', isLoading: true });
++    fetch('/products')
++      .then(response =&gt; {
++        return response.json();
++      })
++      .then(json =&gt; {
++        dispatch({
++          type: 'FETCH_PRODUCTS_SUCCESS',
++          isLoading: false,
++          products: json
++        });
++      })
++      .catch(error =&gt; {
++        dispatch({
++          type: 'FETCH_PRODUCTS_ERROR',
++          isLoading: false,
++          errorMessage: error
++        });
++      });
++  };
++};
+diff --git a/my-app/src/index.js b/my-app/src/index.js
+index 8b110d0..5dc54d6 100644
+--- a/my-app/src/index.js
++++ b/my-app/src/index.js
+@@ -1,7 +1,8 @@
+ import React from 'react';
+ import ReactDOM from 'react-dom';
+ import { Provider } from 'react-redux';
+-import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
++import thunkMiddleware from 'redux-thunk';
++import { createStore, applyMiddleware, compose } from 'redux';
+ import pbsApp from './reducers';
+ import './index.css';
+ import App from './App';
+@@ -9,7 +10,7 @@ import registerServiceWorker from './registerServiceWorker';
+
+ // Initialisation des middlewares et extensions de Redux
+ const enhancers = [];
+-const middleware = [];
++const middleware = [thunkMiddleware];
+
+ if (process.env.NODE_ENV === 'development') {
+   const devToolsExtension = window.devToolsExtension;
+diff --git a/my-app/src/reducers/index.js b/my-app/src/reducers/index.js
+index f1afb43..ba0b770 100644
+--- a/my-app/src/reducers/index.js
++++ b/my-app/src/reducers/index.js
+@@ -1,8 +1,10 @@
+ import { combineReducers } from 'redux';
+ import basket from './basket';
++import products from './products';
+
+ const pbsApp = combineReducers({
+-  basket
++  basket,
++  products
+ });
+
+ export default pbsApp;
+diff --git a/my-app/src/reducers/products.js b/my-app/src/reducers/products.js
+new file mode 100644
+index 0000000..d139d8a
+--- /dev/null
++++ b/my-app/src/reducers/products.js
+@@ -0,0 +1,54 @@
++// @flow
++type Products = Array&lt;{
++  id: number,
++  name: string,
++  price: string,
++  currencySymbol: string,
++  currencyCode: string,
++  image: string,
++  description: string
++}&gt;;
++type State = {
++  +isLoading: boolean,
++  errorMessage?: string,
++  +products: Products
++};
++
++const initialState = { isLoading: false, products: [] };
++
++type FetchProductsAction = { type: 'FETCH_PRODUCTS', isLoading: boolean };
++type FetchProductsSuccessAction = {
++  type: 'FETCH_PRODUCTS_SUCCESS',
++  isLoading: boolean,
++  products: Products
++};
++type FetchProductsErrorAction = {
++  type: 'FETCH_PRODUCTS_ERROR',
++  isLoading: boolean,
++  errorMessage: string
++};
++
++type Action =
++  | FetchProductsAction
++  | FetchProductsSuccessAction
++  | FetchProductsErrorAction;
++
++const products = (state: State = initialState, action: Action): State =&gt; {
++  switch (action.type) {
++    case 'FETCH_PRODUCTS':
++      return { ...state, isLoading: action.isLoading };
++    case 'FETCH_PRODUCTS_SUCCESS':
++      return {
++        ...state,
++        isLoading: action.isLoading,
++        products: action.products
++      };
++    case 'FETCH_PRODUCTS_ERROR':
++      return { ...state, isLoading: action.isLoading };
++    default:
++      (action: empty);
++      return state;
++  }
++};
++
++export default products;
+</code></pre><br />
+</details></p>
+<h3 id="10-routing-avec-react-router"><a name="user-content-10-routing-avec-react-router" href="#10-routing-avec-react-router" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>10. Routing avec React Router</h3>
+<p>Installation des dépendances</p>
+<pre><code>yarn add history react-router-dom react-router-redux@next
+</code></pre>
+
+<p>Modifier le point d&rsquo;entrée pour initialiser l&rsquo;historique avec <a href="https://github.com/ReactTraining/history">history/createBrowserHistory</a> (cet historique sera utilisé par le routerMiddleware et en props de notre app)</p>
+<p>Appliquer le middleware <a href="https://github.com/ReactTraining/react-router/tree/master/packages/react-router-redux">routerMiddleware</a> à redux pour synchroniser Store et navigation</p>
+<p>Ajouter routerReducer dans combineReducers</p>
+<p>Dans l&rsquo;application principal, utiliser ConnectedRouter de react-router-redux et <a href="https://reacttraining.com/react-router/web/api/Route">Route de react-router-dom</a> pour définir le routing de notre application</p>
+<p>ProductList sera rendu sur l&rsquo;URL <code>/</code><br />
+ProductDetail (nouveau composant) sera rendu sur l&rsquo;URL <code>/p:id</code></p>
+<p>Créer le composant ProductDetail qui permet d&rsquo;afficher les infos du produits en faisant appel à l&rsquo;API GET /products/:id (utilisation de Redux en asynchrone)</p>
+<p>Utiliser <a href="https://reacttraining.com/react-router/web/api/Link">Link de react-router-dom</a> pour faire le lien entre un produit de la liste et la page détail</p>
+<p><details><br />
+  <summary>Solution</summary><br />
+<pre><code class="diff">diff --git a/my-app/src/App.jsx b/my-app/src/App.jsx
+index e7fba2a..2811d6e 100644
+--- a/my-app/src/App.jsx
++++ b/my-app/src/App.jsx
+@@ -1,9 +1,12 @@
+ import React, { Component } from 'react';
+ import { connect } from 'react-redux';
+ import { bindActionCreators } from 'redux';
++import { Route } from 'react-router-dom';
++import { ConnectedRouter as Router } from 'react-router-redux';
+ import * as actionCreators from './actions';
+ import ProductList from './ProductList';
+ import ShoppingCart from './ShoppingCart';
++import ProductDetail from './ProductDetail';
+ import './App.css';
+
+ class App extends Component {
+@@ -15,10 +18,22 @@ class App extends Component {
+   };
+   render() {
+     return (
+-      &lt;div className=&quot;App&quot;&gt;
+-        &lt;ShoppingCart productCount={this.props.basket.length} /&gt;
+-        &lt;ProductList onAdd={this.handleAdd} onRemove={this.handleRemove} /&gt;
+-      &lt;/div&gt;
++      &lt;Router history={this.props.history}&gt;
++        &lt;div className=&quot;App&quot;&gt;
++          &lt;ShoppingCart productCount={this.props.basket.length} /&gt;
++          &lt;Route
++            exact
++            path=&quot;/&quot;
++            render={() =&gt; (
++              &lt;ProductList
++                onAdd={this.handleAdd}
++                onRemove={this.handleRemove}
++              /&gt;
++            )}
++          /&gt;
++          &lt;Route path=&quot;/p:id&quot; component={ProductDetail} /&gt;
++        &lt;/div&gt;
++      &lt;/Router&gt;
+     );
+   }
+ }
+diff --git a/my-app/src/Product.jsx b/my-app/src/Product.jsx
+index 7be2344..74afd63 100644
+--- a/my-app/src/Product.jsx
++++ b/my-app/src/Product.jsx
+@@ -1,5 +1,6 @@
+ // @flow
+ import * as React from 'react';
++import { Link } from 'react-router-dom';
+
+ type Bike = {
+   id: number,
+@@ -37,18 +38,17 @@ class Product extends React.Component&lt;Props, State&gt; {
+   render(): React$Element&lt;string&gt; {
+     return (
+       &lt;li itemScope itemType=&quot;http://schema.org/Product&quot;&gt;
+-        &lt;span itemProp=&quot;name&quot;&gt;{this.props.bike.name}&lt;/span&gt;
++        &lt;Link to={`p${this.props.bike.id}`}&gt;
++          &lt;span itemProp=&quot;name&quot;&gt;{this.props.bike.name}&lt;/span&gt;
++        &lt;/Link&gt;
+         &lt;div itemProp=&quot;offers&quot; itemScope itemType=&quot;http://schema.org/Offer&quot;&gt;
+           &lt;span
+             itemProp=&quot;price&quot;
+-            content=&quot;{this.props.bike.price.replace(' ', '').replace(',', '.')}&quot;
++            content={this.props.bike.price.replace(' ', '').replace(',', '.')}
+           &gt;
+             {this.props.bike.price}
+           &lt;/span&gt;
+-          &lt;span
+-            itemProp=&quot;priceCurrency&quot;
+-            content=&quot;{this.props.bike.currencyCode}&quot;
+-          &gt;
++          &lt;span itemProp=&quot;priceCurrency&quot; content={this.props.bike.currencyCode}&gt;
+             {this.props.bike.currencySymbol}
+           &lt;/span&gt;
+           &lt;link itemProp=&quot;availability&quot; href=&quot;http://schema.org/InStock&quot; /&gt; En
+diff --git a/my-app/src/ProductDetail.jsx b/my-app/src/ProductDetail.jsx
+new file mode 100644
+index 0000000..9276313
+--- /dev/null
++++ b/my-app/src/ProductDetail.jsx
+@@ -0,0 +1,65 @@
++import React, { Component } from 'react';
++import { connect } from 'react-redux';
++import { bindActionCreators } from 'redux';
++import * as actionCreators from './actions/products.js';
++
++class ProductDetail extends Component {
++  componentDidMount() {
++    this.props.actions.fetchProduct(this.props.match.params.id);
++  }
++  render() {
++    if (this.props.product.isLoading) {
++      return &lt;div className=&quot;App&quot;&gt;...loading&lt;/div&gt;;
++    } else {
++      if (this.props.product.product) {
++        return (
++          &lt;div itemScope itemType=&quot;http://schema.org/Product&quot;&gt;
++            &lt;span itemProp=&quot;name&quot;&gt;{this.props.product.product.name}&lt;/span&gt;
++            &lt;img
++              itemProp=&quot;image&quot;
++              src={this.props.product.product.image}
++              alt={this.props.product.product.name}
++            /&gt;
++            &lt;div itemProp=&quot;offers&quot; itemScope itemType=&quot;http://schema.org/Offer&quot;&gt;
++              &lt;span
++                itemProp=&quot;price&quot;
++                content={this.props.product.product.price
++                  .replace(' ', '')
++                  .replace(',', '.')}
++              &gt;
++                {this.props.product.product.price}
++              &lt;/span&gt;
++              &lt;span
++                itemProp=&quot;priceCurrency&quot;
++                content={this.props.product.product.currencyCode}
++              &gt;
++                {this.props.product.product.currencySymbol}
++              &lt;/span&gt;
++              &lt;link itemProp=&quot;availability&quot; href=&quot;http://schema.org/InStock&quot; /&gt;{' '}
++              En stock
++            &lt;/div&gt;
++            Product description:
++            &lt;span
++              itemProp=&quot;description&quot;
++              dangerouslySetInnerHTML={{
++                __html: this.props.product.product.description
++              }}
++            /&gt;
++          &lt;/div&gt;
++        );
++      }
++      return &lt;div className=&quot;App&quot;&gt;...loading&lt;/div&gt;;
++    }
++  }
++}
++
++const mapStateToProps = state =&gt; ({
++  product: state.products
++});
++const mapDispatchToProps = dispatch =&gt; {
++  return {
++    actions: bindActionCreators(Object.assign({}, actionCreators), dispatch)
++  };
++};
++
++export default connect(mapStateToProps, mapDispatchToProps)(ProductDetail);
+diff --git a/my-app/src/actions/products.js b/my-app/src/actions/products.js
+index 1f25a91..70c02de 100644
+--- a/my-app/src/actions/products.js
++++ b/my-app/src/actions/products.js
+@@ -11,7 +11,16 @@ type Products = Array&lt;{
+ type State = {
+   +isLoading: boolean,
+   errorMessage?: string,
+-  +products: Products
++  +products: Products,
++  product?: {
++    +id: number,
++    +name: string,
++    +price: string,
++    +currencySymbol: string,
++    +currencyCode: string,
++    +image: string,
++    +description: string
++  }
+ };
+
+ type FetchProductsAction = { type: 'FETCH_PRODUCTS', isLoading: boolean };
+@@ -26,10 +35,33 @@ type FetchProductsErrorAction = {
+   errorMessage: string
+ };
+
++type FetchProductAction = { type: 'FETCH_PRODUCT', isLoading: boolean };
++type FetchProductSuccessAction = {
++  type: 'FETCH_PRODUCT_SUCCESS',
++  isLoading: boolean,
++  product: {
++    +id: number,
++    +name: string,
++    +price: string,
++    +currencySymbol: string,
++    +currencyCode: string,
++    +image: string,
++    +description: string
++  }
++};
++type FetchProductErrorAction = {
++  type: 'FETCH_PRODUCT_ERROR',
++  isLoading: boolean,
++  errorMessage: string
++};
++
+ type Action =
+   | FetchProductsAction
+   | FetchProductsSuccessAction
+-  | FetchProductsErrorAction;
++  | FetchProductsErrorAction
++  | FetchProductAction
++  | FetchProductSuccessAction
++  | FetchProductErrorAction;
+
+ type GetState = () =&gt; State;
+ type PromiseAction = Promise&lt;Action&gt;;
+@@ -61,3 +93,27 @@ export const fetchProducts = (): ThunkAction =&gt; {
+       });
+   };
+ };
++
++export const fetchProduct = (id: number): ThunkAction =&gt; {
++  return (dispatch, getState) =&gt; {
++    dispatch({ type: 'FETCH_PRODUCT', isLoading: true });
++    fetch(`/products/${id}`)
++      .then(response =&gt; {
++        return response.json();
++      })
++      .then(json =&gt; {
++        dispatch({
++          type: 'FETCH_PRODUCT_SUCCESS',
++          isLoading: false,
++          product: json
++        });
++      })
++      .catch(error =&gt; {
++        dispatch({
++          type: 'FETCH_PRODUCT_ERROR',
++          isLoading: false,
++          errorMessage: error
++        });
++      });
++  };
++};
+diff --git a/my-app/src/index.js b/my-app/src/index.js
+index 5dc54d6..05aacbd 100644
+--- a/my-app/src/index.js
++++ b/my-app/src/index.js
+@@ -3,14 +3,18 @@ import ReactDOM from 'react-dom';
+ import { Provider } from 'react-redux';
+ import thunkMiddleware from 'redux-thunk';
+ import { createStore, applyMiddleware, compose } from 'redux';
++import createHistory from 'history/createBrowserHistory';
++import { routerMiddleware } from 'react-router-redux';
+ import pbsApp from './reducers';
+ import './index.css';
+ import App from './App';
+ import registerServiceWorker from './registerServiceWorker';
+
++const history = createHistory();
++
+ // Initialisation des middlewares et extensions de Redux
+ const enhancers = [];
+-const middleware = [thunkMiddleware];
++const middleware = [thunkMiddleware, routerMiddleware(history)];
+
+ if (process.env.NODE_ENV === 'development') {
+   const devToolsExtension = window.devToolsExtension;
+@@ -25,7 +29,7 @@ let store = createStore(pbsApp, composedEnhancers);
+
+ ReactDOM.render(
+   &lt;Provider store={store}&gt;
+-    &lt;App /&gt;
++    &lt;App history={history} /&gt;
+   &lt;/Provider&gt;,
+   document.getElementById('root')
+ );
+diff --git a/my-app/src/reducers/index.js b/my-app/src/reducers/index.js
+index ba0b770..73f8ebd 100644
+--- a/my-app/src/reducers/index.js
++++ b/my-app/src/reducers/index.js
+@@ -1,8 +1,10 @@
+ import { combineReducers } from 'redux';
++import { routerReducer } from 'react-router-redux';
+ import basket from './basket';
+ import products from './products';
+
+ const pbsApp = combineReducers({
++  router: routerReducer,
+   basket,
+   products
+ });
+diff --git a/my-app/src/reducers/products.js b/my-app/src/reducers/products.js
+index d139d8a..c0453c0 100644
+--- a/my-app/src/reducers/products.js
++++ b/my-app/src/reducers/products.js
+@@ -11,7 +11,16 @@ type Products = Array&lt;{
+ type State = {
+   +isLoading: boolean,
+   errorMessage?: string,
+-  +products: Products
++  +products: Products,
++  product?: {
++    +id: number,
++    +name: string,
++    +price: string,
++    +currencySymbol: string,
++    +currencyCode: string,
++    +image: string,
++    +description: string
++  }
+ };
+
+ const initialState = { isLoading: false, products: [] };
+@@ -28,10 +37,33 @@ type FetchProductsErrorAction = {
+   errorMessage: string
+ };
+
++type FetchProductAction = { type: 'FETCH_PRODUCT', isLoading: boolean };
++type FetchProductSuccessAction = {
++  type: 'FETCH_PRODUCT_SUCCESS',
++  isLoading: boolean,
++  product: {
++    +id: number,
++    +name: string,
++    +price: string,
++    +currencySymbol: string,
++    +currencyCode: string,
++    +image: string,
++    +description: string
++  }
++};
++type FetchProductErrorAction = {
++  type: 'FETCH_PRODUCT_ERROR',
++  isLoading: boolean,
++  errorMessage: string
++};
++
+ type Action =
+   | FetchProductsAction
+   | FetchProductsSuccessAction
+-  | FetchProductsErrorAction;
++  | FetchProductsErrorAction
++  | FetchProductAction
++  | FetchProductSuccessAction
++  | FetchProductErrorAction;
+
+ const products = (state: State = initialState, action: Action): State =&gt; {
+   switch (action.type) {
+@@ -45,6 +77,16 @@ const products = (state: State = initialState, action: Action): State =&gt; {
+       };
+     case 'FETCH_PRODUCTS_ERROR':
+       return { ...state, isLoading: action.isLoading };
++    case 'FETCH_PRODUCT':
++      return { ...state, isLoading: action.isLoading };
++    case 'FETCH_PRODUCT_SUCCESS':
++      return {
++        ...state,
++        isLoading: action.isLoading,
++        product: action.product
++      };
++    case 'FETCH_PRODUCT_ERROR':
++      return { ...state, isLoading: action.isLoading };
+     default:
+       (action: empty);
+       return state;
+--
+</code></pre><br />
+</details></p></article></body></html>
