@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class Product extends Component {
   constructor(props) {
@@ -33,7 +33,9 @@ class Product extends Component {
 
   handleAddProduct = () => {
     this.props.handleAddProduct(this.props.id);
-    this.setState({ inBasket: true });
+    this.setState(prevState => ({
+      inBasket: true
+    }));
   };
 
   handleRemoveProduct = () => {
