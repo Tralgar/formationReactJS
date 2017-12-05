@@ -42,9 +42,7 @@ class Product extends Component<PropsType> {
         <img src={this.props.image} alt={this.props.name} />
         <br />
         {this.state.inBasket ? (
-          <button onClick={this.handleRemoveProduct}>
-            SUPPRIMER DU PANIER
-          </button>
+          <button onClick={this.handleRemoveProduct}>SUPPRIMER DU PANIER</button>
         ) : (
           <button onClick={this.handleAddProduct}>AJOUTER AU PANIER</button>
         )}

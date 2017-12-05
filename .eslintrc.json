@@ -41,6 +41,7 @@
       "unix"
     ],
     "prettier/prettier": ["error", {
+      "printWidth": 100,
       "singleQuote": true,
       "trailingComma": "all",
       "bracketSpacing": true,
