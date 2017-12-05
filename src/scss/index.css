@@ -5,14 +5,14 @@ body {
 }
 
 .product {
-  background: green;
   margin-bottom: 50px;
+  background: green;
 }
 
 .shoppingcart {
-  background: red;
   position: fixed;
   top: 0;
   right: 0;
   padding: 20px;
+  background: red;
 }

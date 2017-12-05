@@ -1,9 +1,9 @@
 // @flow
 
-import React from "react";
+import React from 'react';
 
 type Props = {
-  nbProducts: number
+  nbProducts: number,
 };
 
 const ShoppingCart = (props: Props): React.Element<string> => (

@@ -1,8 +1,15 @@
-import React, { Component } from 'react';
+// @flow
+
+import React, { PureComponent } from 'react';
 import products from './products.json';
 import Product from './Product';
 
-class ProductList extends Component {
+type PropsType = {
+  handleAddProduct: (productId: number) => void,
+  handleRemoveProduct: (productId: number) => void,
+};
+
+class ProductList extends PureComponent<PropsType> {
   render() {
     return (
       <div>

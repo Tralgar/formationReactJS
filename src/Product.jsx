@@ -1,12 +1,33 @@
-import React, { Component } from "react";
+// @flow
 
-class Product extends Component {
-  constructor(props) {
+import React, { Component } from 'react';
+
+type PropsType = {
+  handleAddProduct: () => void,
+  handleRemoveProduct: () => void,
+  id: number,
+  name: string,
+  price: number,
+  image: string,
+};
+
+class Product extends Component<PropsType> {
+  constructor(props): void {
     super(props);
     this.state = {
-      inBasket: false
+      inBasket: false,
     };
   }
+
+  handleAddProduct = (): void => {
+    this.props.handleAddProduct(this.props.id);
+    this.setState({ inBasket: true });
+  };
+
+  handleRemoveProduct = (): void => {
+    this.props.handleRemoveProduct(this.props.id);
+    this.setState({ inBasket: false });
+  };
 
   render() {
     return (
@@ -22,26 +43,14 @@ class Product extends Component {
         <br />
         {this.state.inBasket ? (
           <button onClick={this.handleRemoveProduct}>
-            "SUPPRIMER DU PANIER"
+            SUPPRIMER DU PANIER
           </button>
         ) : (
-          <button onClick={this.handleAddProduct}>"AJOUTER AU PANIER"</button>
+          <button onClick={this.handleAddProduct}>AJOUTER AU PANIER</button>
         )}
       </div>
     );
   }
-
-  handleAddProduct = () => {
-    this.props.handleAddProduct(this.props.id);
-    this.setState(prevState => ({
-      inBasket: true
-    }));
-  };
-
-  handleRemoveProduct = () => {
-    this.props.handleRemoveProduct(this.props.id);
-    this.setState({ inBasket: false });
-  };
 }
 
 export default Product;

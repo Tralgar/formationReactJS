@@ -1,20 +1,28 @@
 // @flow
 
-import React, { Component } from "react";
-import ProductList from "./ProductList";
-import ShoppingCart from "./ShoppingCart";
+import React, { Component } from 'react';
+import ProductList from './ProductList';
+import ShoppingCart from './ShoppingCart';
 
-type StateType = {
-  productInBasket: Array<number>
-};
-
-class App extends Component<StateType> {
+class App extends Component {
   constructor(props): void {
     super(props);
     this.state = {
-      productInBasket: []
+      productInBasket: [],
     };
   }
+
+  handleAddProduct = (productId): void => {
+    this.setState(prevState => [...prevState.productInBasket, productId]);
+  };
+
+  handleRemoveProduct = (productId): void => {
+    this.setState({
+      productInBasket: this.state.productInBasket.filter(
+        id => id !== productId,
+      ),
+    });
+  };
 
   render(): React.Element<string> {
     return (
@@ -27,18 +35,6 @@ class App extends Component<StateType> {
       </div>
     );
   }
-
-  handleAddProduct = (productId): void => {
-    this.setState(prevState => {
-      productInBasket: [...prevState.productInBasket, productId];
-    });
-  };
-
-  handleRemoveProduct = (productId): void => {
-    this.setState({
-      productInBasket: this.state.productInBasket.filter(id => id !== productId)
-    });
-  };
 }
 
 export default App;

@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "csscomb": "^4.2.0",
     "husky": "^0.14.3",
     "lint-staged": "^6.0.0",
     "npm-run-all": "^4.1.2",
@@ -13,27 +14,20 @@
     "react-scripts": "1.0.17"
   },
   "lint-staged": {
-    "src/scss/**/*.scss": [
+    "src/**/*.{json,css,scss}": [
+      "prettier --write",
       "git add"
     ],
-//    "src/**/*.{json,css,scss}": [
-//      "prettier --write",
-//      "git add"
-//    ],
-//    "src/**/*.{js,jsx,json,css}": [
-//      "prettier --single-quote --trailing-comma all --write",
-//      "git add"
-//    ],
-    "src/**/*.{json,js,jsx,css,scss}": [
+    "src/**/*.{js,jsx}": [
       "eslint",
       "git add"
     ]
   },
   "scripts": {
-    "precommit": "yarn csscomb src/scss && lint-staged && flow",
-    //"prettier-watch": "onchange 'src/**/*.{json,js,jsx,css,scss}' -- prettier --write {{changed}}",
+    "precommit": "yarn csscomb src/scss && lint-staged",
+    "prettier-watch": "onchange 'src/**/*.{json,css,scss}' -- prettier --write {{changed}}",
     "eslint-check": "eslint --print-config .eslintrc.json | eslint-config-prettier-check",
-    "eslint-watch": "onchange 'src/**/*.{json,js,jsx,css,scss}' -- eslint --write {{changed}}",
+    "eslint-watch": "onchange 'src/**/*.{js,jsx}' -- eslint --fix {{changed}}",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
