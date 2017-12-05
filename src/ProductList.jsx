@@ -10,7 +10,7 @@ type PropsType = {
 };
 
 class ProductList extends PureComponent<PropsType> {
-  render() {
+  render(): React.Element<string> {
     return (
       <div>
         <br />

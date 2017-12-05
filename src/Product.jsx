@@ -29,7 +29,7 @@ class Product extends Component<PropsType> {
     this.setState({ inBasket: false });
   };
 
-  render() {
+  render(): React.Element<string> {
     return (
       <div className="product">
         PRODUIT :

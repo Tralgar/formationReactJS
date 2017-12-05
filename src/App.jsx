@@ -12,11 +12,11 @@ class App extends Component {
     };
   }
 
-  handleAddProduct = (productId): void => {
+  handleAddProduct = (productId: number): void => {
     this.setState(prevState => [...prevState.productInBasket, productId]);
   };
 
-  handleRemoveProduct = (productId): void => {
+  handleRemoveProduct = (productId: number): void => {
     this.setState({
       productInBasket: this.state.productInBasket.filter(
         id => id !== productId,
