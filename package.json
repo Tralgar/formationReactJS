@@ -16,7 +16,8 @@
     "redux": "^3.7.2",
     "redux-devtools": "^3.4.1",
     "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "yarn-run-all": "^3.1.1"
   },
   "lint-staged": {
     "src/**/*.{json,css,scss}": [
@@ -37,7 +38,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "api": "json-server --watch src/db.json --port 3001 --delay 600",
+    "api": "json-server --watch src/products.json --port 3001",
     "start-dev": "npm-run-all --parallel prettier-watch eslint-watch start api"
   },
   "proxy": "http://localhost:3001",
