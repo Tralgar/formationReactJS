@@ -12,6 +12,7 @@ import './scss/index.css';
 import app from './reducers';
 import ProductDetail from './ProductDetail';
 import App from './App';
+import Register from './Register';
 
 // Redux thunk nous permet de crééer des actions qui retournent des fonctions à la place d'objets (Voir action product, on peut faire des promises sans
 // retourner un objet)
@@ -39,6 +40,7 @@ ReactDOM.render(
         <Switch>
           <Route path="/" exact component={App} />
           <Route path="/p:id" exact component={ProductDetail} />
+          <Route path="/register" exact component={Register} />
         </Switch>
       </div>
     </ConnectedRouter>

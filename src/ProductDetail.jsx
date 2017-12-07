@@ -11,13 +11,12 @@ type PropsType = {
     fetchProduct: () => ProductThunkAction,
   },
   product: PayloadType,
+  match: any,
 };
 
 class ProductDetail extends PureComponent<PropsType> {
   componentWillMount() {
-    if (this.props.match) {
-      this.props.actions.fetchProduct(this.props.match.params.id);
-    }
+    this.props.actions.fetchProduct(this.props.match.params.id);
   }
 
   render(): React.Element<string> {
