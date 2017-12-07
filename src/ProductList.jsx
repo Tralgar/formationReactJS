@@ -3,7 +3,8 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import Loadable from 'react-loadable';
+//import Loadable from 'react-loadable';
+import Product from './Product';
 import * as actionCreators from './actions/products';
 import { PayloadType, ThunkAction } from './constants/products';
 
@@ -16,17 +17,17 @@ type PropsType = {
   products: PayloadType,
 };
 
-const Loading = () => <div>EN CHARGEMENT DE LOADABLE</div>;
+//const Loading = () => <div>EN CHARGEMENT DE LOADABLE</div>;
 
-const LoadableProduct = Loadable({
-  loader: () => import('./Product'),
-  loading: Loading,
-  delay: 300,
-  render(loaded, props) {
-    const Product = loaded.namedExport;
-    return <Product {...props} />;
-  },
-});
+//const LoadableProduct = Loadable({
+//  loader: () => import('./Product'),
+//  loading: Loading,
+//  delay: 300,
+//  render(loaded, props) {
+//    const Product = loaded.namedExport;
+//    return <Product {...props} />;
+//  },
+//});
 
 class ProductList extends PureComponent<PropsType> {
   //  componentWillMount() {
@@ -53,7 +54,7 @@ class ProductList extends PureComponent<PropsType> {
           <br />
           <ul>
             {this.props.products.results.map(product => (
-              <LoadableProduct
+              <Product //<LoadableProduct
                 handleAddProduct={this.props.handleAddProduct}
                 handleRemoveProduct={this.props.handleRemoveProduct}
                 key={product.id}

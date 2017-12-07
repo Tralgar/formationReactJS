@@ -30,7 +30,6 @@
       "git add"
     ],
     "src/**/*.{js,jsx}": [
-      "eslint --fix",
       "git add"
     ]
   },
