@@ -1,6 +1,7 @@
 // @flow
 
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 type PropsType = {
   handleAddProduct: () => void,
@@ -46,6 +47,7 @@ class Product extends Component<PropsType> {
         ) : (
           <button onClick={this.handleAddProduct}>AJOUTER AU PANIER</button>
         )}
+        <Link to={`/p${this.props.id}`}>Voir le produit</Link>
       </div>
     );
   }

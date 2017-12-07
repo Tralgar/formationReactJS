@@ -7,6 +7,13 @@ import {
   ThunkAction,
 } from '../constants/products';
 
+import {
+  FETCH_PRODUCT,
+  FETCH_PRODUCT_SUCCESS,
+  FETCH_PRODUCT_ERROR,
+  ProductThunkAction,
+} from '../constants/product';
+
 export const fetchProducts = (): ThunkAction => dispatch => {
   dispatch({ type: FETCH_PRODUCTS, payload: { isLoading: true } });
   fetch('/products')
@@ -19,4 +26,14 @@ export const fetchProducts = (): ThunkAction => dispatch => {
     });
 };
 
-export const fetchProduct = (): void => {};
+export const fetchProduct = (id: number): ProductThunkAction => dispatch => {
+  dispatch({ type: FETCH_PRODUCT, payload: { isLoading: true } });
+  fetch(`/products/${id}`)
+    .then(response => response.json())
+    .then(json => {
+      dispatch({ type: FETCH_PRODUCT_SUCCESS, payload: { isLoading: false, result: json } });
+    })
+    .catch(error => {
+      dispatch({ type: FETCH_PRODUCT_ERROR, payload: { isLoading: false, errorMessage: error } });
+    });
+};
